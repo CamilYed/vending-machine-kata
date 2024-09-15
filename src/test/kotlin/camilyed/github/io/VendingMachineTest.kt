@@ -1,6 +1,7 @@
 package camilyed.github.io
 
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
 class VendingMachineTest {
@@ -23,6 +24,6 @@ class VendingMachineTest {
         val price: Double = machine.selectShelf(1)
 
         // then
-        Assertions.assertEquals(2.50, price)
+        assertEquals(2.50, price)
     }
 }

@@ -2,11 +2,13 @@ package camilyed.github.io
 
 class VendingMachine {
 
-    fun addProductToShelf(shelfNumber: Int, product: Any) {
-
+    private val shelves = mutableMapOf<Int, Product>()
+    
+    fun addProductToShelf(shelfNumber: Int, product: Product) {
+        this.shelves[shelfNumber] = product
     }
 
     fun selectShelf(i: Int): Double {
-        return 0.0
+        return shelves[i]?.price ?: 0.0
     }
 }
