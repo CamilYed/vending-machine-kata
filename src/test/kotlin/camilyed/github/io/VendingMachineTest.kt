@@ -15,7 +15,7 @@ class VendingMachineTest {
             shelfNumber = 1,
             product = Product(
                 name = "Cola",
-                price = "2.50"
+                price = 2.50
             )
         )
 
