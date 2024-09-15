@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.0.20"
+    id("io.gitlab.arturbosch.detekt") version("1.23.3")
 }
 
 group = "camilyed.github.io"
