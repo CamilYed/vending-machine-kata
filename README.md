@@ -7,7 +7,7 @@ vending machine ( https://en.wikipedia.org/wiki/Vending_machine )
 The project is maven based. We are providing maven wrapper so if do not have maven installed call `./mvnw` (or `mvnw.cmd` on Windows) to 
 build it.
 On opening you will find two classes: 
-`VendingMachine` and `VendingMachineTest`.
+`VendingMachine` and `camilyed.github.io.VendingMachineTest`.
 The second one contains one test, which you can easily remove, since it is not part of the assignment.
 You can also rename or even remove provided classes.
 Below you will find requirements, key aspects and most importantly assignment itself.
