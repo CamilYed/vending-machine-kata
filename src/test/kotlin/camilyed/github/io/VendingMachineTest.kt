@@ -26,4 +26,16 @@ class VendingMachineTest {
         // then
         assertEquals(2.50, price)
     }
+
+    @Test
+    fun `should return failure result when selecting non-existing shelf`() {
+        // given
+        val machine = VendingMachine()
+
+        // when
+        val result = machine.selectShelf(99) // Shelf 99 does not exist
+
+        // then
+        assertEquals(ShelfSelectionResult.Failure("Shelf does not exist"), result)
+    }
 }
