@@ -1,6 +1,5 @@
 package camilyed.github.io
 
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
@@ -21,10 +20,10 @@ class VendingMachineTest {
         )
 
         // when
-        val price: Double = machine.selectShelf(1)
+        val result = machine.selectShelf(1)
 
         // then
-        assertEquals(2.50, price)
+        assertEquals(ShelfSelectionResult.Success(2.50), result)
     }
 
     @Test
@@ -33,7 +32,7 @@ class VendingMachineTest {
         val machine = VendingMachine()
 
         // when
-        val result = machine.selectShelf(99) // Shelf 99 does not exist
+        val result = machine.selectShelf(99)
 
         // then
         assertEquals(ShelfSelectionResult.Failure("Shelf does not exist"), result)
