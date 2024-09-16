@@ -11,6 +11,6 @@ class VendingMachine {
     fun selectShelf(shelfNumber: Int): ShelfSelectionResult {
         return shelves[shelfNumber]?.let { product ->
             ShelfSelectionResult.Success(product.price)
-        } ?: ShelfSelectionResult.Failure("Shelf does not exist")
+        } ?: ShelfSelectionResult.Failure(shelfNumber)
     }
 }

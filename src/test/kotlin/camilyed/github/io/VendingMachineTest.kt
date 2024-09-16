@@ -35,6 +35,6 @@ class VendingMachineTest {
         val result = machine.selectShelf(99)
 
         // then
-        assertEquals(ShelfSelectionResult.Failure("Shelf does not exist"), result)
+        assertEquals("Shelf 99 does not exist.", (result as ShelfSelectionResult.Failure).message)
     }
 }
